@@ -1,0 +1,14 @@
+@import '../constants/grid'
+@import '../constants/media'
+@import '../utils/media'
+
+
+.wrapper
+  margin: 0 auto
+  max-width: $wrapper-width
+  min-width: calc(100vw - #{$grid-gutter})
+  padding-left: ($grid-gutter / 2)
+  padding-right: ($grid-gutter / 2)
+
+  +above($screen-md)
+    min-width: $wrapper-width

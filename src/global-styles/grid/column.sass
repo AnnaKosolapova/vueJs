@@ -1,0 +1,30 @@
+@import '../constants/grid'
+@import '../constants/media'
+@import '../utils/media'
+
+$grid-columns: 12
+
+@mixin makeGrid($class)
+
+  @for $index from $grid-columns through 0
+    @if $index > 0
+      .column-#{$class}-#{$index}
+        flex-basis: percentage(($index / $grid-columns))
+        flex: 0 0 auto
+        margin-bottom: ($grid-gutter / 4)
+        max-width: percentage(($index / $grid-columns))
+        width: percentage(($index / $grid-columns))
+
++makeGrid(df)
+
++below($screen-lg)
+  +makeGrid(lg)
+
++below($screen-md)
+  +makeGrid(md)
+
++below($screen-sm)
+  +makeGrid(sm)
+
++below($screen-xs)
+  +makeGrid(xs)
