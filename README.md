@@ -14,10 +14,7 @@ npm install
 ### Build front end resources
 ```
 gulp
-```
-or
-
-```
+// or
 gulp watch
 ```
 
